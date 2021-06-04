@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+
+header {
+    background-color: #f1ffff;
+    height: 100px;
+    position: relative;
+    /* margin: 0 auto; */
+    border-bottom: 1px solid #009292;
+}
+
+#antet {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#antet img {
+    width: 100px;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    animation-name: anim-titlu;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
+#titlu-antet {
+    display: inline-block;
+    animation-name: anim-titlu;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
+#titlu-antet {
+    margin-top: 50px;
+    vertical-align: top;
+    font-size: 20px;
+    
+}
+
+#antet input {
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    border: solid #009292;
+    border-width: 1px 1px;
+    border-radius: 4px;
+    height: 50px;
+    float: right;
+    margin-top: 30px;
+    /* display: inline-block; */
+    transition: all .2s ease-in-out;
+}
+#antet input:hover {
+    transform: scale(1.1);
+    border: solid #005a5a;
+}
+
+
+
+.meniu-optiuni {
+    /* width: 70%; */
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #009292;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #009292;
+}
+
+a:visited {
+    color: black;
+}
+
+
+.optiune-dropdown {
+    cursor: pointer;
+    margin: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 15px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    box-shadow: 2px 2px 3px 2px #888888;
+    min-width: auto;
+    z-index: 1;
+}
+.dropdown-content a {
+    font-size: 15px;
+    display: block;
+    padding: 12px 16px;
+    background-color: #ffffff;
+}
+.dropdown:hover .optiune-dropdown {
+    font-weight: bold;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+#nume-categorie {
+    font-size: 30px;
+    color: rgb(52, 172, 219);
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+.elem-grila img {
+    width: 300px;
+}
+.grila-pop img {
+    width: 230px;
+    height: 100px;
+    object-fit: cover;
+}
+.nume-tel {
+    text-align: center;
+}
+#grila-tel {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 70%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    justify-content: center;
+    /* min-height: calc(100vh - 140px); */
+}
+
+.grila-pop {
+    display: inline;
+    visibility: hidden;
+    position: absolute;
+    /* z-index: -1; */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 2px 2px 3px 2px #888888;
+    z-index: 2;
+}
+.elem-grila:hover .grila-pop {
+    /* display: inline-block; */
+    visibility: visible;
+    /* margin-bottom: 20px; */
+}
+.descriere ul{
+    padding: 15px;
+}
+/* nu imi afiseaza corect footerul */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    z-index: 2;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(224,224,224,1) 90%, rgba(166,224,224,1) 100%);
+}
+.contacte-subsol {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+}
+.contacte-subsol ul{
+    list-style-type: square;
+    /* margin-bottom: 10px; */
+    /* position: absolute; */
+}
+.contacte-subsol ul li {
+    margin-bottom: 10px;
+}
+.contacte-subsol img{
+    width: 40px;
+    right: 5px;
+    position: absolute;
+    /* margin-bottom: 10px; */
+}
+
+@media only screen and (max-width: 800px) {
+
+    #antet input {
+        display: none;
+    }   
+
+    #nume-categorie {
+        font-size: 15px;
+        /* text-align: center; */
+    }
+
+
+    #grila-tel {
+        margin: 0 auto;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-row-gap: 20px;
+        grid-column-gap: 10px;
+        justify-content: center;
+        min-height: calc(100vh - 20px);
+    }
+    .elem-grila img {
+        width: 160px;
+    }
+    .nume-tel {
+        font-size: 12px;
+    }
+    .grila-pop img {
+        display: none;
+    }
+    .descriere p {
+        display: none;
+    }
+    .descriere ul {
+        font-size: 12px;
+    }
+    .contacte-subsol img {
+        width: 40px;
+    }
+    .contacte-subsol ul {
+        font-size: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    header {
+        height: 60%;
+    }
+    #antet img {
+        width: 50px;
+        margin-top: 25px;
+        display: inline-block;
+    }
+    #titlu-antet {
+        vertical-align: top;
+        font-size: 8px;
+        
+    }
+    #antet input {
+        display: none;
+    }
+
+    .optiune-dropdown {
+        margin: 10px;
+        font-size: 8px;
+    }
+    .dropdown-content {
+        min-width: 100px;
+    }
+    .dropdown-content a {
+        min-width: 20px;
+        font-size: 8px;
+        display: block;
+        padding: 5px 8px;
+        background-color: #ffffff;
+    }
+
+    #nume-categorie {
+        font-size: 10px;
+        /* text-align: center; */
+    }
+
+
+    #grila-tel {
+        margin: 0 auto;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-row-gap: 20px;
+        grid-column-gap: 10px;
+        justify-content: center;
+        min-height: calc(100vh - 20px);
+    }
+    .elem-grila img {
+        width: 120px;
+    }
+    .nume-tel {
+        font-size: 6px;
+    }
+    .grila-pop img {
+        display: none;
+    }
+    .descriere p {
+        display: none;
+    }
+    .descriere ul {
+        font-size: 6px;
+    }
+    .contacte-subsol img {
+        width: 20px;
+    }
+    .contacte-subsol ul {
+        font-size: 8px;
+    }
+    
+}
+
+.contacte-subsol ul li:hover::after {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Info_Simple_bw.svg/1024px-Info_Simple_bw.svg.png);
+    background-size: 8px 8px;
+    display: inline-block;
+    width: 8px; 
+    height: 8px;
+    margin-left: 5px;
+    content:" ";
+}
+
+@keyframes anim-titlu {
+    0% {opacity: 0; color: #009292;}
+    50% {opacity: 0.5; color: #006868;}
+    100% {opacity: 1; color: #000000;}
+}
